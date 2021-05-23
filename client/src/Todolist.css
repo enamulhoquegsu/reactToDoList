@@ -1,0 +1,135 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+     background-color: #845ec2;
+    /* background-image:url("./background.jpeg");  */
+
+   
+}
+
+/****************** end of body**************************/
+
+.header{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    color:white;
+    flex: 1 1 auto;
+
+}
+
+.home{
+    margin: 0 auto;
+} 
+    .home > a {
+        color: bisque;
+    }
+    .home :hover{
+        background-color: cadetblue;
+    }
+
+/****************** end of header **********************************************/
+
+.main-container{
+    width: 100%;
+    min-height: 400px;
+    flex: 3 3 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color:white;
+    margin-bottom: 8px;  
+    padding : 2% 0; 
+}
+/***********************/
+.create-category{
+    
+}
+    .create-category > div > *{
+        font-size: large;
+    }
+/**********************/
+
+.choose-category{
+    margin-top: 10px;
+}
+    .choose-category > * {
+        font-size: large;
+    }
+/*************************************************/
+.all-data{
+    margin-top: 10px;
+    width: 90%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 300px;
+    padding: 10px;
+}
+
+    .category{
+        background-color: #845ec2;
+        color: white;
+        width:80%;
+        height:40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center; 
+        font-size: 2rem;
+    }
+
+    .delete-button {
+        color: blue;
+        width:80%;
+        min-height:40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+    }   
+        
+        .info{
+            display: flex;
+            justify-content: space-between;
+            border: darkslateblue 1px solid;
+            padding : 6px;
+            font-size: 1.5rem;
+            margin: 6px 0;
+        }
+
+    .enter-item{
+        margin-top:10px;
+       
+
+    }
+        .enter-item > *{
+             font-size: large;
+        }
+    /**************** all-data div end here   ************ */    
+
+
+
+
+
+/****************** end of main container **************************/
+
+.footer{
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    flex: 1 1 auto;
+    padding: 4px 0 16px 0;
+    
+}
+

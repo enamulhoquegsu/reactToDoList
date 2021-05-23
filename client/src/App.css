@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title {
+    flex:1 1 auto;
+    text-align: center;
+    border: aqua 2px solid;
+    color: white;
+
+
+}
+
+.form {
+    width: 80%;
+    margin: 0 auto;
+
+    
+}
+
+.form > form{
+    display: flex;
+    flex-direction: column;
+    flex: 3 3 auto;
+    min-height: 300px;
+    padding-bottom: 20px;
+    width: 100%;
+    border: rebeccapurple 2px solid;
+    
+}
+
+.form > form > * {
+    font-size: 20px;
+    margin : 4px 0;
+    
+}
+
+.form > form > label{
+    color:white;
+}
+
+.form > form > button {
+    width: 40%;
+    margin: 0 auto;
+}
+
+
+
+
+
