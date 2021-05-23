@@ -41,7 +41,7 @@ const EditScreen = (props) => {
                 setError(error.message)
             })
         
-    }, [itemId])
+    }, [itemId,url])
 
 
     const handleSubmit = (e)=>{
@@ -51,7 +51,7 @@ const EditScreen = (props) => {
                item_id : itemId,
                item_name : item.item_name
             }).then(response=>{
-                const data = response.data
+                
                 setMessage("data is updated successfully")
             }).catch(error=>{
                 console.log(error.message)
@@ -64,7 +64,7 @@ const EditScreen = (props) => {
                 categoryName : categoryName,
                 item_name : item.item_name
             }).then(response=>{
-                const data = response.data
+                
                 alert('Data is updated successfully')
             }).catch(error=>{
                 console.log(error.message)

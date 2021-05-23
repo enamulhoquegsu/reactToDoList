@@ -2,7 +2,8 @@
 import express from 'express'
 import mongoose from 'mongoose';
 import var_ from 'lodash'
-require('dotenv').config()
+//require('dotenv').config()
+import {} from 'dotenv/config'
 const app = express()
 const PORT = process.env.PORT || 8080
 let defaultArray = [{item_name: 'Welcome to your do list'}, 
@@ -76,6 +77,8 @@ app.post('/api/item/update/', (req, res)=>{
 app.post('/api/item/delete/', (req, res)=>{
   const item_id = req.body.item_id
   const categoryName = req.body.categoryName
+
+  console.log( " item id " + item_id)
 
   console.log("delete item " + categoryName)
   

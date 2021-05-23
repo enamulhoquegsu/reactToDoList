@@ -10,7 +10,6 @@ const MainContainer = ({props}) => {
 
     const [myresponse, setMyresponse]=useState("")
     const [deleteResponse, setDeleteResponse]=useState('')
-    const [deleteCategoryItemResponse, setDeleteCategoyItemResponse]=useState(null)
     const [ deleteCategoryResponse, setDeleteCategoryResponse]=useState('')
     const [createCategoryResponse, setCreateCategoryResponse]=useState('')
     const [createCategory, setCreatedCategory]=useState('')
@@ -54,11 +53,6 @@ const MainContainer = ({props}) => {
     }, [ categoryName,deleteCategoryResponse]) // when ever a item is deleted from category
                                 
 
-                          
-                
-    
-    
-
     useEffect(() => {
         axios.get('/api/items/')
             .then(function (response) {
@@ -86,7 +80,6 @@ const MainContainer = ({props}) => {
         if(e.target.value){
             axios.get('/api/categories/' + e.target.value ).then(response=>{
                 const data = response.data
-                console.log(data)
                 setCategoryName(data.categoryExist.category_name)
                 setLists(data.categoryExist.items)
             
@@ -146,7 +139,6 @@ const MainContainer = ({props}) => {
             axios.post('/api/item/delete/', {
             item_id : id 
             }).then(response=>{
-                const data = response.data
                 setDeleteResponse(new Date())
             }).catch(error=>error.message)
         }
@@ -269,7 +261,7 @@ const MainContainer = ({props}) => {
                                     name = {x._id}
                                     id = {x._id}
                                     onClick ={()=>
-                                    { props.history.push("/item/edit/"+ x._id + "?categoryName="+"home") } }
+                                    { props.history.push("/item/edit/"+ x._id + "?categoryName=home") } }
                                 />
                             </div>
                             
