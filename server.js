@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import var_ from 'lodash'
 //require('dotenv').config()
 import {} from 'dotenv/config'
+import path from 'path'
 const app = express()
 const PORT = process.env.PORT || 8080
 let defaultArray = [{item_name: 'Welcome to your do list'}, 
@@ -253,20 +254,17 @@ app.post('/api/category/update/',(req, res)=>{
       res.send(error.message)
     })
     
-    
-
     //sent respnse to client
   }).catch(err => {
     console.log('Oh! Dark')
   });
         
-      
 
 })
 
 
 if(process.env.NODE_ENV === 'production'){
-  app.use(express.static('client/build'))
+  app.use(express.static('client/build'));
 }
 
 /***************************Mongo Db connection  ******************************************* */
